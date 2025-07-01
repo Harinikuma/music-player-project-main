@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import Playlists from './components/Playlists';
 import Menu from './components/menu'
@@ -56,9 +58,14 @@ const App = () => {
   //   setShowPlaylists(false);
   //   setShowArtists(true);
   // };
+  // Place in index.js or top of App.js
+  window.onerror = function (message, source, lineno, colno, error) {
+    if (message === "Script error.") {
+      return true; // Suppress it
+    }
+  };
 
   return (
-    
     <Router>
       <div className="canvas">
         <div>
@@ -67,37 +74,37 @@ const App = () => {
           </Routes>
         </div>
         <div className="right">
-        <Routes>
-          <Route path="/" element={<Home />} />
+          <Routes>
+            <Route path="/" element={<Home />} />
           </Routes>
-    <Routes>
+          <Routes>
             <Route path="/" element={<Artists />} />
-            </Routes>
+          </Routes>
           <Routes>
             <Route path="/" element={<Playlists />} />
-            </Routes>
-            
-            <Routes>
+          </Routes>
+
+          <Routes>
             <Route path="/" element={<AlbumSong />} />
-      </Routes>
+          </Routes>
         </div>
-        
       </div>
       {/* <UserProvider> */}
 
       <Routes>
-      <Route path="/contact" element={<Contact />} />
-      {/* <Route path="/login" element={<Sigin />} /> */}
-      {/* <Route path="/fetchlikedSongs" element={<Liked />} /> */}
+        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/login" element={<Sigin />} /> */}
+        {/* <Route path="/fetchlikedSongs" element={<Liked />} /> */}
         <Route path="/songs" element={<Songs />} />
         <Route path="/albumSong" element={<Album />} />
         <Route path="/artistSong" element={<Artist />} />
       </Routes>
       {/* </UserProvider> */}
-
     </Router>
   );
 };
+
+
 
 export default App;
 // import React from 'react'

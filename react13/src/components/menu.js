@@ -42,7 +42,7 @@ const Menu = () => {
             </li>
           </Link>
           <li>
-            <a>Others</a>
+            <a>Others--</a>
           </li>
         </ul>
       </div>

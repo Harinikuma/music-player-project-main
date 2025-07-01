@@ -1,0 +1,152 @@
+#hubspotForm {
+    color: white;
+    width: 60%;
+    margin-left: 0;
+    gap: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    padding-top: 10%;
+    font-style: italic;
+}
+.sigin-right{
+    color: rgb(68, 69, 70);
+    width: 60%;
+    margin-left: 0;
+    gap: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    padding-top: 10%;
+}
+.sigin-page a img{
+    transition: background-color 0.5s;
+}
+.sigin-page a img:hover{
+    background:rgba(130, 127, 127, 0.125);
+    border-radius: 5px;
+}
+.sigin-canvas {
+    width: 65%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-top:30px;
+    margin-left: 15%;
+    overflow: hidden; /* Prevent internal scrolling */
+}
+
+.sigin-left {
+    width: 60%;
+    height: 100%; /* Match parent's height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.sigin-left img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure it fits within the container */
+}
+
+/* Responsive Styles */
+.sigin-page {
+    position: relative;
+}
+
+.back-image img {
+    width: 50px;
+    margin-bottom: 0;
+    padding: 10px;
+    position: absolute;
+    left: 10px;
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #535C91;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .sigin-canvas {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        flex-direction: column; /* Stack the children vertically */
+        height: 100vh; /* Full height of the viewport */
+        background: url('/public/signin-photo.jpg') no-repeat center center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .sigin-left {
+        width: 100%;
+        display: none; /* Hide the sigin-left section on small screens */
+    }
+
+    #hubspotForm {
+        width: 80%;
+        padding: 20px;
+        padding-top: 0;
+        background-color: rgba(87, 85, 85, 0.204); /* Optional: Add background color for contrast */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the form */
+    }
+
+    .back-image img {
+        position: fixed; /* Ensure the back image stays in the corner */
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    #hubspotForm {
+        width: 90%;
+        padding: 10px;
+    }
+}

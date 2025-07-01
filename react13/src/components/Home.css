@@ -1,0 +1,107 @@
+.home {
+    height: 60vh; /* Use vh for viewport height, ensuring it covers 25% of the viewport height */
+    display: flex;
+    align-items: flex-start; /* Align h1 tag to the top */
+    justify-content: flex-start; /* Align h1 tag to the left */
+    color: white; /* Text color for the h1 tag */
+    background:url('/public/Home-page-BG.png') no-repeat fixed;
+    background-size: 100% 70%; /* Ensure the image fits 25% of the viewport height */
+    background-blend-mode: overlay; /* Blend the gradient with the image */
+    z-index: 1;
+  }
+
+  .home-content {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    padding: 20px;    
+    border-radius: 5px;
+    font-size: 10vh;
+    background-color: rgba(0, 0, 0, 0.321);
+    z-index: 0; /* Set a lower z-index */
+  }
+  .suggest-p{
+    font-size: 30px;
+  }
+  
+.login-button,
+.sigin-button {
+  border: 1px solid rgb(141, 139, 139);
+  border-radius: 20px;
+  gap: 0;
+  top: 0;
+  margin-top: 0;
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px; /* Adjust margin as needed */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;    
+}
+.suggest{
+    border: 1px solid rgb(141, 139, 139);
+  border-radius: 30px;
+  margin: 4%;
+  width: 30%;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.login-button:hover,
+.sigin-button:hover,
+.suggest:hover {
+  background-color: #535C91;
+  color: white;
+}
+.button-sign {
+    position: absolute;
+    top: 2%;
+    right: 2%; /* Adjust the right value as needed */
+    display: flex; /* Use flexbox to align buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .home {
+        height: 40vh; /* Use vh for viewport height, ensuring it covers 25% of the viewport height */
+        display: flex;
+        align-items: flex-start; /* Align h1 tag to the top */
+        justify-content: flex-start; /* Align h1 tag to the left */
+        color: white; /* Text color for the h1 tag */
+        background:
+                    url('/public/Home-page-BG.png') no-repeat fixed;
+        background-size: 100% 40%; /* Ensure the image fits 25% of the viewport height */
+      }
+      .home-content {
+        top: 15%;
+        left: 2%;
+        margin: 1%;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.522);
+        z-index: 0; /* Ensure home-content is behind other elements */
+      }
+      .home-content h1{
+        font-size: 3vh;
+      }
+      .button-sign {
+        position: absolute;
+        top: 7%;
+        left: 2%;
+        display: flex; /* Use flexbox to align buttons horizontally */
+        align-items: center; /* Center buttons vertically */
+      }
+      .suggest{
+        top: 0;
+        width: 50%;
+        font-size: 1vh;
+        padding: 7px;
+    }
+    .suggest-p{
+        font-size: 2vh;
+      }
+}

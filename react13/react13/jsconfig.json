@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "ESNext", // Use ES modules if targeting modern JavaScript
+    "moduleResolution": "node",
+    "target": "ES2021",
+    "checkJs": true,
+    "allowJs": true
+  }
+}

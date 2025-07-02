@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // import { UserProvider } from './UserContext';
 
-// ✅ Suppress third-party script errors
 window.onerror = function (message, source, lineno, colno, error) {
   if (message === "Script error.") {
     console.warn("Suppressed a script error from a third-party script.");
